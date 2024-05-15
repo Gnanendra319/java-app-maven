@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/mayaworld13/Java-maven-jenkins-argocd.git'
+        //git branch: 'main', url: 'https://github.com/mdazfar2/maven-jenkins-ArgoCD.git'
       }
     }
     stage('Build and Test') {
@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://48.216.210.58:9000"
+        SONAR_URL = "http://52.173.192.239:9000"
       }
       steps {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
@@ -31,7 +31,7 @@ pipeline {
     }
     stage('Build and Push Docker Image') {
       environment {
-        DOCKER_IMAGE = "mayaworld13/jenkinsci_argocd:${BUILD_NUMBER}"
+        DOCKER_IMAGE = "azfaralam440/argoCD:${BUILD_NUMBER}"
         // DOCKERFILE_LOCATION = "spring-boot-app/Dockerfile"
         REGISTRY_CREDENTIALS = credentials('docker-cred')
       }
@@ -47,14 +47,14 @@ pipeline {
     }
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "Java-maven-jenkins-argocd"
-            GIT_USER_NAME = "mayaworld13"
+            GIT_REPO_NAME = "maven-jenkins-ArgoCD"
+            GIT_USER_NAME = "mdazfar2"
         }
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
-                    git config user.email "mayank07082001@gmail.com"
-                    git config user.name "Mayank Sharma"
+                    git config user.email "mdazfaralam440@gmail.com"
+                    git config user.name "mdazfar2"
                     BUILD_NUMBER=${BUILD_NUMBER}
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" spring-boot-app-manifests/deployment.yml
                     git add spring-boot-app-manifests/deployment.yml
