@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://52.173.192.239:9000"
+        SONAR_URL = "http://52.173.31.12:9000"
       }
       steps {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
@@ -33,7 +33,7 @@ pipeline {
       environment {
         DOCKER_IMAGE = "azfaralam440/argoCD:${BUILD_NUMBER}"
         // DOCKERFILE_LOCATION = "spring-boot-app/Dockerfile"
-        REGISTRY_CREDENTIALS = credentials('docker-cred')
+        REGISTRY_CREDENTIALS = credentials('docker')
       }
       steps {
         script {
