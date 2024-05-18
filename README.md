@@ -108,9 +108,12 @@ After running this script, use your `<VM-publicIP:8080>` and access it via the b
      ![pipeline Screenshot](https://github.com/mdazfar2/maven-jenkins-ArgoCD/assets/100375390/04517050-4b7d-4267-90c3-efe3cc0a17d4)
 
 
-- Now install the Kubeadm because we are deploy ArgoCD using Kubernetes cluster, Visit the installation of [kubeadm documentation](https://github.com/mdazfar2/ShellScript-Toolkit/blob/main/k8s-install.md).
+- Now install the Kubeadm because we are deploy ArgoCD using Kubernetes cluster, Visit the installation of [kubernetes](https://github.com/mdazfar2/ShellScript-Toolkit/tree/main/kubernetes%20Installation).
+  
 - you can also use kubernetes using Azure Kubernetes Service (AKS).
-- for deploy argoCD visit the argocd documentation.
+  <br/>
+  
+- for deploy argoCD visit the [argocd documentation](https://github.com/mdazfar2/ShellScript-Toolkit/tree/main/ArgoCD%20Installation).
 
 - after done of it's upload your github project link in `New App`.
 - And hope you can understand by the above tutorial video.
