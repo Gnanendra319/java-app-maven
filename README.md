@@ -85,6 +85,9 @@ After running this script, use your `<VM-publicIP:8080>` and access it via the b
     ```bash
     docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
     ```
+   After run the container Use your <VM-publicIP:9000> for sonarqube dashboard and access it via the browser. and enter username `admin` & password is also `admin`.
+  
+
 
 - after all then Install plugins on Jenkins-
 - Plugins Prerequisites in Jenkins-
