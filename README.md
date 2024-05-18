@@ -25,9 +25,7 @@ Before setting up this project, ensure you have the following prerequisites:
 
 - **Microsoft Azure Account**: You will need an Azure account to provision a Resource Group and create a Virtual Machine in the RG. If you don't have an Azure account you can [create one here](https://signup.live.com/signup?sru=https%3a%2f%2flogin.live.com%2foauth20_authorize.srf%3flc%3d1033%26client_id%3d51483342-085c-4d86-bf88-cf50c7252078%26cobrandid%3d788a943c-8e34-4c0a-9c83-1e4ef0322879%26mkt%3dEN-US%26opid%3d32AE1738B573F897%26opidt%3d1715941888%26uaid%3d35fcf7c10d4343389192c4200722161b%26contextid%3d741CCF2D50723A8F%26opignore%3d1&mkt=EN-US&uiflavor=web&lw=1&fl=easi2&cobrandid=788a943c-8e34-4c0a-9c83-1e4ef0322879&client_id=51483342-085c-4d86-bf88-cf50c7252078&uaid=35fcf7c10d4343389192c4200722161b&suc=8e0e8db5-b713-4e91-98e6-470fed0aa4c2&lic=1).
 
-   - Launch a virtual machine with the Ubuntu 22.04 LTS image and choose the size D2ads v5 - 2 vCPUs and 8 GiB memory because we need to access more things like Jenkins, SonarQube, Kubernetes, ArgoCD, and much more.
-
-   - **SSH Access**: Connect to your Azure VM using SSH or any preferred method for configuration and setup. 
+    
 
 ---
 
