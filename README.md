@@ -109,7 +109,7 @@ After running this script, use your `<VM-publicIP:8080>` and access it via the b
 
 
 - Now install the Kubeadm because we are deploy ArgoCD using Kubernetes cluster, Visit the installation of [kubeadm documentation](https://github.com/mdazfar2/ShellScript-Toolkit/blob/main/k8s-install.md).
-
+- you can also use kubernetes using Azure Kubernetes Service (AKS).
 - for deploy argoCD visit the argocd documentation.
 
 - after done of it's upload your github project link in `New App`.
