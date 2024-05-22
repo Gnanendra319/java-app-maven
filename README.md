@@ -1,10 +1,9 @@
-# Deploying Spring Boot App using K8s, ArgoCD, Jenkins and all/
+# Deploying Spring Boot App using K8s, ArgoCD, Jenkins and all
 
 successfully deploy a Spring Boot application using a robust CI/CD pipeline. It provides an overview of the technologies and processes involved, including Jenkins, SonarQube, Kubernetes, ArgoCD, and Microsoft Azure.
 
 <!--video uploading here-->
 
-## 🎥 Watch the tutorial video [here](https://player.vimeo.com/video/948914848).
 # Workflow Diagram-
 ![argoCD](https://github.com/mdazfar2/maven-jenkins-ArgoCD/assets/100375390/eae6d390-5eb9-4aff-b80b-88220dfff6e6)
 
