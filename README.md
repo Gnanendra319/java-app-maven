@@ -9,6 +9,18 @@ Successfully deploy a Spring Boot application using a robust CI/CD pipeline. It 
 # Workflow Diagram-
 ![argoCD](https://github.com/mdazfar2/maven-jenkins-ArgoCD/assets/100375390/eae6d390-5eb9-4aff-b80b-88220dfff6e6)
 
+## Project Overview
+
+This project demonstrates the deployment of a Spring Boot application using a fully automated DevOps pipeline. The key components and technologies used in this project are:
+
+- **Spring Boot**: A Java-based framework used to create stand-alone, production-grade Spring applications.
+- **Maven:** A build automation tool used primarily for Java projects.
+- **Jenkins**: An open-source automation server used to build, test, and deploy our application.
+- **SonarQube**: A tool for continuous inspection of code quality to perform automatic reviews.
+- **Kubernetes:** An open-source platform for automating the deployment, scaling, and management of containerized applications.
+- **ArgoCD**: A declarative, GitOps continuous delivery tool for Kubernetes.
+- **Microsoft Azure:** A cloud computing service used for deploying and managing applications.
+
 # Getting Started
 ## Prerequisites
 Before setting up this project, ensure you have the following prerequisites:
