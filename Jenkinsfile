@@ -23,7 +23,7 @@ pipeline {
           sh 'docker ps'
           sh 'docker images'
             sh 'docker build -t test:1.0.1 .'
-            docker login -u hindusree444@gmail.com -p Jayavijaya@1 https://hub.docker.com/repository/docker/hindusreedunaboyina/maven-java/general
+            docker login -u <hindusree444@gmail.com> -p <Jayavijaya@1> <https://hub.docker.com/repository/docker/hindusreedunaboyina/maven-java/general>
 
             def dockerImage = docker.image("${DOCKER_IMAGE}")
             
