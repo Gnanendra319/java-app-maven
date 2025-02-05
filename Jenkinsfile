@@ -4,7 +4,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        //git branch: 'main', url: 'https://github.com/mdazfar2/maven-jenkins-ArgoCD.git'
+        git branch: 'main', url: 'https://github.com/Gnanendra319/java-app-maven'
       }
     }
     stage('Build and Test') {
