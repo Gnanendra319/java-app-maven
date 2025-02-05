@@ -24,33 +24,13 @@ pipeline {
           sh 'docker images'
             sh 'docker build -t test:1.0.1 .'
               sh 'docker login -u <hindusree444@gmail.com> -p <Jayavijaya@1> <https://hub.docker.com/repository/docker/hindusreedunaboyina/maven-java/general>'
-
-            def dockerImage = docker.image("${DOCKER_IMAGE}")
+                 sh 'docker push hindusree444@gmail.com/maven-java:v1'
+            // def dockerImage = docker.image("${DOCKER_IMAGE}")
             
-            docker.withRegistry('https://index.docker.io/v1/', "docker") {
+           // docker.withRegistry('https://index.docker.io/v1/', "docker") {
                 dockerImage.push()
             }
         }
       }
     }
-    stage('Update Deployment File') {
-        environment {
-            GIT_REPO_NAME = "maven-jenkins-ArgoCD"
-            GIT_USER_NAME = "mdazfar2"
-        }
-        steps {
-            withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
-                sh '''
-                    git config user.email "mdazfaralam440@gmail.com"
-                    git config user.name "mdazfar2"
-                    BUILD_NUMBER=${BUILD_NUMBER}
-                    sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" manifest_file/deployment.yml
-                    git add manifest_file/deployment.yml
-                    git commit -m "Update deployment image to version ${BUILD_NUMBER}"
-                    git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
-                '''
-            }
-        }
-    }
-  }
 }
