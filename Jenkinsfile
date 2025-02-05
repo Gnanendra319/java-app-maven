@@ -14,16 +14,6 @@ pipeline {
         sh 'mvn clean install'
       }
     }
-    stage('Static Code Analysis') {
-      environment {
-        SONAR_URL = "http://20.15.228.97:9000"
-      }
-      steps {
-        withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
-          sh 'mvn sonar:sonar -Dsonar.login=$SONAR_AUTH_TOKEN -Dsonar.host.url=${SONAR_URL}'
-        }
-      }
-    }
     stage('Build and Push Docker Image') {
       environment {
         DOCKER_IMAGE = "azfaralam440/argocd:${BUILD_NUMBER}"
