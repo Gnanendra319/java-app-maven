@@ -19,13 +19,15 @@ pipeline {
     }
     stage('Build and Push Docker Image') {
       environment {
-        DOCKER_IMAGE = "azfaralam440/argocd:${BUILD_NUMBER}"
+       // DOCKER_IMAGE = "azfaralam440/argocd:${BUILD_NUMBER}"
         // DOCKERFILE_LOCATION = "spring-boot-app/Dockerfile"
-        REGISTRY_CREDENTIALS = credentials('docker')
+        //REGISTRY_CREDENTIALS = credentials('docker')
       }
       steps {
         script {
-            sh 'docker build -t ${DOCKER_IMAGE} .'
+          sh 'docker ps'
+          sh 'docker images'
+            sh 'docker build -t test:1.0.1 .'
             def dockerImage = docker.image("${DOCKER_IMAGE}")
             docker.withRegistry('https://index.docker.io/v1/', "docker") {
                 dockerImage.push()
