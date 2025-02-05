@@ -18,11 +18,6 @@ pipeline {
       }
     }
     stage('Build and Push Docker Image') {
-      environment {
-       // DOCKER_IMAGE = "azfaralam440/argocd:${BUILD_NUMBER}"
-        // DOCKERFILE_LOCATION = "spring-boot-app/Dockerfile"
-        //REGISTRY_CREDENTIALS = credentials('docker')
-      }
       steps {
         script {
           sh 'docker ps'
