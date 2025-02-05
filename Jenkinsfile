@@ -11,7 +11,7 @@ pipeline {
       steps {
         sh 'ls -ltr'
         // build the project and create a JAR file
-        sh 'mvn clean install'
+        sh 'mvn build'
         sh 'maven build complated'
         sh 'ls -ltr'
         sh 'pwd'
