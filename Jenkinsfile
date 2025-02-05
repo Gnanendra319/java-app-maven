@@ -12,6 +12,7 @@ pipeline {
         sh 'ls -ltr'
         // build the project and create a JAR file
         sh 'mvn clean install'
+        sh 'maven build complated'
       }
     }
     stage('Build and Push Docker Image') {
