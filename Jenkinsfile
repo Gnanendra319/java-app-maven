@@ -12,7 +12,7 @@ pipeline {
         sh 'ls -ltr'
         // build the project and create a JAR file
         sh 'mvn install'
-        sh 'maven build complated'
+        sh 'echo maven build complated'
         sh 'ls -ltr'
         sh 'pwd'
       }
